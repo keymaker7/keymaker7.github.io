@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "키메이커 Lab",
+    pageTitle: "Keymaker Lab",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -17,7 +17,19 @@ const config: QuartzConfig = {
     },
     locale: "ko-KR",
     baseUrl: "keymaker7.github.io",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: [
+      "private",
+      "templates",
+      ".obsidian",
+      // 운영 메타 숨김 — 페르소나 정체성·임무·홈 대시보드는 노출 X
+      "**/_*.md",
+      // 테스트 폴더 숨김
+      "**/테스트/**",
+      "**/test/**",
+      // 페르소나 정의 폴더 (혹시 동기화될 경우 대비)
+      "**/personas/**",
+      "**/transformers/**",
+    ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
