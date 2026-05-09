@@ -21,14 +21,13 @@ const config: QuartzConfig = {
       "private",
       "templates",
       ".obsidian",
-      // 운영 메타 숨김 — 페르소나 정체성·임무·홈 대시보드는 노출 X
-      "**/_*.md",
       // 테스트 폴더 숨김
       "**/테스트/**",
       "**/test/**",
-      // 페르소나 정의 폴더 (혹시 동기화될 경우 대비)
+      // 페르소나 정의·운영 메타 (혹시 동기화될 경우 대비)
       "**/personas/**",
       "**/transformers/**",
+      "**/agents/**",
     ],
     defaultDateType: "modified",
     theme: {
