@@ -26,6 +26,11 @@ ProfileImage.css = `
   border: 3px solid var(--lightgray);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 800px) {
+  .profile-image-wrapper {
+    display: none;
+  }
+}
 `
 
 export default (() => ProfileImage) satisfies QuartzComponentConstructor
