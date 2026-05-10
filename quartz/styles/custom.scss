@@ -1,3 +1,35 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+/* ── 탐색기 깔끔하게 ── */
+.explorer {
+  /* 탐색기 항목 한 줄 말줄임 */
+  ul > li > a,
+  ul > li > .folder-container > a,
+  ul > li > .folder-container > button span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 220px;
+  }
+
+  /* 폴더 내 항목 간격 줄이기 */
+  ul {
+    li {
+      margin: 1px 0;
+      line-height: 1.5;
+    }
+  }
+
+  /* 탐색기 전체 너비 제한 */
+  #explorer-content {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}
+
+/* ── 푸터 간결하게 ── */
+footer {
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
