@@ -40,7 +40,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       title: "📂 카테고리",
       folderClickBehavior: "collapse",
-      folderDefaultState: "collapsed",
+      folderDefaultState: "open",
       useSavedState: true,
       filterFn: (node) => {
         const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
@@ -88,7 +88,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       title: "📂 카테고리",
       folderClickBehavior: "collapse",
-      folderDefaultState: "collapsed",
+      folderDefaultState: "open",
       useSavedState: true,
       filterFn: (node) => {
         const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
