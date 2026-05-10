@@ -2,7 +2,6 @@
 title: "TMUX · CMUX · 덕테이프 — 터미널 멀티플렉서의 진화"
 tags: [개발도구, 터미널, AI, tmux, cmux, claude-code]
 date: 2026-05-11
-author: keymaker
 description: "30년 된 TMUX부터 AI 시대의 CMUX까지, 그리고 그 뒷이야기 '덕테이프' 정신. 한 장의 카드뉴스로 정리하는 터미널 멀티플렉서의 어제와 오늘."
 ---
 
