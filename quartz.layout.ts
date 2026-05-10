@@ -41,7 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
       title: "📂 카테고리",
       folderClickBehavior: "collapse",
       folderDefaultState: "open",
-      useSavedState: true,
+      useSavedState: false,
       filterFn: (node) => {
         const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
         if (hide.some((h) => node.name === h)) return false
@@ -89,7 +89,7 @@ export const defaultListPageLayout: PageLayout = {
       title: "📂 카테고리",
       folderClickBehavior: "collapse",
       folderDefaultState: "open",
-      useSavedState: true,
+      useSavedState: false,
       filterFn: (node) => {
         const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
         if (hide.some((h) => node.name === h)) return false
