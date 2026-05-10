@@ -41,12 +41,12 @@ export const defaultContentPageLayout: PageLayout = {
       folderDefaultState: "open",
       useSavedState: false,
       mapFn: (node) => {
-        if (node.file && node.displayName) {
-          node.displayName = node.displayName
-            .replace(/^\[[^\]]*\]\s*/, "")
-            .replace(/\s*[-—–]\s*.+$/, "")
-            .trim()
-        }
+        if (!node.displayName) return
+        const cleaned = node.displayName
+          .replace(/^\[[^\]]*\]\s*/, "")
+          .replace(/\s*[-—–]\s*.+$/, "")
+          .trim()
+        if (cleaned) node.displayName = cleaned
       },
     }),
   ],
@@ -76,12 +76,12 @@ export const defaultListPageLayout: PageLayout = {
       folderDefaultState: "open",
       useSavedState: false,
       mapFn: (node) => {
-        if (node.file && node.displayName) {
-          node.displayName = node.displayName
-            .replace(/^\[[^\]]*\]\s*/, "")
-            .replace(/\s*[-—–]\s*.+$/, "")
-            .trim()
-        }
+        if (!node.displayName) return
+        const cleaned = node.displayName
+          .replace(/^\[[^\]]*\]\s*/, "")
+          .replace(/\s*[-—–]\s*.+$/, "")
+          .trim()
+        if (cleaned) node.displayName = cleaned
       },
     }),
   ],
