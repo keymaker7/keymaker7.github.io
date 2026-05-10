@@ -43,10 +43,8 @@ export const defaultContentPageLayout: PageLayout = {
       folderDefaultState: "open",
       useSavedState: false,
       filterFn: (node) => {
-        const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
-        if (hide.some((h) => node.name === h)) return false
-        if (node.name.startsWith("_") && node.file) return false
-        return true
+        const hide = ["_archive", "private", "templates", "tags"]
+        return !hide.includes(node.slugSegment)
       },
       mapFn: (node) => {
         if (node.displayName) {
@@ -91,10 +89,8 @@ export const defaultListPageLayout: PageLayout = {
       folderDefaultState: "open",
       useSavedState: false,
       filterFn: (node) => {
-        const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
-        if (hide.some((h) => node.name === h)) return false
-        if (node.name.startsWith("_") && node.file) return false
-        return true
+        const hide = ["_archive", "private", "templates", "tags"]
+        return !hide.includes(node.slugSegment)
       },
       mapFn: (node) => {
         if (node.displayName) {
