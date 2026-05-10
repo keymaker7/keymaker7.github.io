@@ -14,16 +14,17 @@ const ProfileImage: QuartzComponent = ({ fileData, displayClass }: QuartzCompone
 
 ProfileImage.css = `
 .profile-image-wrapper {
-  margin: 0.3rem 0 0.8rem 0;
+  margin: 0.5rem 0 1rem 0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .profile-image {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border: 3px solid var(--lightgray);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 `
 
