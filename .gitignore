@@ -9,3 +9,30 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+# === 보안: 시크릿·환경변수·인증 파일 절대 커밋 X ===
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+id_rsa*
+id_ed25519*
+**/secrets/
+**/credentials*
+**/openclaw.json
+**/openclaw-*.json
+**/.openclaw*/
+**/auth.json
+**/access.json
+**/*api*key*
+**/*apikey*
+**/token*
+**/.aws/
+**/.gcp/
+**/service-account*.json
+
+# === Vault 안전망 ===
+**/personas/
+**/transformers/
+**/agents/
