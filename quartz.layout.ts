@@ -37,29 +37,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer({
-      title: "📂 카테고리",
-      folderClickBehavior: "collapse",
-      folderDefaultState: "open",
-      useSavedState: false,
-      filterFn: (node) => {
-        const hide = ["_archive", "private", "templates", "tags"]
-        return !hide.includes(node.slugSegment)
-      },
-      mapFn: (node) => {
-        if (node.displayName) {
-          node.displayName = node.displayName
-            .replace(/^\[.*?\]\s*/, "")
-            .replace(/\s*—\s*.+$/, "")
-            .replace(/\s*\(.*?\)\s*$/, "")
-        }
-      },
-      sortFn: (a, b) => {
-        if (!a.file && b.file) return -1
-        if (a.file && !b.file) return 1
-        return a.displayName.localeCompare(b.displayName, "ko")
-      },
-    }),
+    Component.Explorer(),
   ],
   right: [
     Component.Graph(),
@@ -83,29 +61,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({
-      title: "📂 카테고리",
-      folderClickBehavior: "collapse",
-      folderDefaultState: "open",
-      useSavedState: false,
-      filterFn: (node) => {
-        const hide = ["_archive", "private", "templates", "tags"]
-        return !hide.includes(node.slugSegment)
-      },
-      mapFn: (node) => {
-        if (node.displayName) {
-          node.displayName = node.displayName
-            .replace(/^\[.*?\]\s*/, "")
-            .replace(/\s*—\s*.+$/, "")
-            .replace(/\s*\(.*?\)\s*$/, "")
-        }
-      },
-      sortFn: (a, b) => {
-        if (!a.file && b.file) return -1
-        if (a.file && !b.file) return 1
-        return a.displayName.localeCompare(b.displayName, "ko")
-      },
-    }),
+    Component.Explorer(),
   ],
   right: [],
 }
