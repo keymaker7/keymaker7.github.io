@@ -37,7 +37,17 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderDefaultState: "open",
+      mapFn: (node) => {
+        if (node.file && node.displayName) {
+          node.displayName = node.displayName
+            .replace(/^\[[^\]]*\]\s*/, "")
+            .replace(/\s*[-—–]\s*.+$/, "")
+            .trim()
+        }
+      },
+    }),
   ],
   right: [
     Component.Graph(),
@@ -61,7 +71,17 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderDefaultState: "open",
+      mapFn: (node) => {
+        if (node.file && node.displayName) {
+          node.displayName = node.displayName
+            .replace(/^\[[^\]]*\]\s*/, "")
+            .replace(/\s*[-—–]\s*.+$/, "")
+            .trim()
+        }
+      },
+    }),
   ],
   right: [],
 }
