@@ -1,5 +1,5 @@
 ---
-title: "[Lumi] Canva AI 2.0 — 디자인 도구를 넘어 크리에이티브 플랫폼으로 (2026)"
+title: "Canva AI 2.0"
 date: 2026-05-10
 tags: [블로그, AI, 디자인, Canva, 2026-04, 콘텐츠]
 source: 어벤저스
