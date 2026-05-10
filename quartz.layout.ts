@@ -39,6 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({
       folderDefaultState: "open",
+      useSavedState: false,
       mapFn: (node) => {
         if (node.file && node.displayName) {
           node.displayName = node.displayName
@@ -73,6 +74,7 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({
       folderDefaultState: "open",
+      useSavedState: false,
       mapFn: (node) => {
         if (node.file && node.displayName) {
           node.displayName = node.displayName
