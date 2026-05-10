@@ -19,11 +19,12 @@ ProfileImage.css = `
   justify-content: center;
 }
 .profile-image {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 200px;
+  height: 280px;
+  border-radius: 12px;
   object-fit: cover;
-  border: 3px solid var(--lightgray);
+  object-position: center top;
+  border: 1px solid var(--lightgray);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 800px) {
