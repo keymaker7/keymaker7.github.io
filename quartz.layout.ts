@@ -8,8 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/keymaker7",
     },
   }),
 }
@@ -48,6 +47,14 @@ export const defaultContentPageLayout: PageLayout = {
         if (hide.some((h) => node.name === h)) return false
         if (node.name.startsWith("_") && node.file) return false
         return true
+      },
+      mapFn: (node) => {
+        if (node.displayName) {
+          node.displayName = node.displayName
+            .replace(/^\[.*?\]\s*/, "")
+            .replace(/\s*—\s*.+$/, "")
+            .replace(/\s*\(.*?\)\s*$/, "")
+        }
       },
       sortFn: (a, b) => {
         if (!a.file && b.file) return -1
@@ -88,6 +95,14 @@ export const defaultListPageLayout: PageLayout = {
         if (hide.some((h) => node.name === h)) return false
         if (node.name.startsWith("_") && node.file) return false
         return true
+      },
+      mapFn: (node) => {
+        if (node.displayName) {
+          node.displayName = node.displayName
+            .replace(/^\[.*?\]\s*/, "")
+            .replace(/\s*—\s*.+$/, "")
+            .replace(/\s*\(.*?\)\s*$/, "")
+        }
       },
       sortFn: (a, b) => {
         if (!a.file && b.file) return -1

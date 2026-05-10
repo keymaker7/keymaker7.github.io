@@ -21,6 +21,8 @@ const config: QuartzConfig = {
       "private",
       "templates",
       ".obsidian",
+      "_archive",
+      "_archive/**",
       // 테스트 폴더 숨김
       "**/테스트/**",
       "**/test/**",
