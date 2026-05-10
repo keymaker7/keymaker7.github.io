@@ -38,7 +38,23 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "📂 카테고리",
+      folderClickBehavior: "collapse",
+      folderDefaultState: "collapsed",
+      useSavedState: true,
+      filterFn: (node) => {
+        const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
+        if (hide.some((h) => node.name === h)) return false
+        if (node.name.startsWith("_") && node.file) return false
+        return true
+      },
+      sortFn: (a, b) => {
+        if (!a.file && b.file) return -1
+        if (a.file && !b.file) return 1
+        return a.displayName.localeCompare(b.displayName, "ko")
+      },
+    }),
   ],
   right: [
     Component.Graph(),
@@ -62,7 +78,23 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "📂 카테고리",
+      folderClickBehavior: "collapse",
+      folderDefaultState: "collapsed",
+      useSavedState: true,
+      filterFn: (node) => {
+        const hide = ["_archive", "private", "templates", ".obsidian", "테스트", "test", "tags"]
+        if (hide.some((h) => node.name === h)) return false
+        if (node.name.startsWith("_") && node.file) return false
+        return true
+      },
+      sortFn: (a, b) => {
+        if (!a.file && b.file) return -1
+        if (a.file && !b.file) return 1
+        return a.displayName.localeCompare(b.displayName, "ko")
+      },
+    }),
   ],
   right: [],
 }
