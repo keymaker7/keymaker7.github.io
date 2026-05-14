@@ -26,6 +26,8 @@ const config: QuartzConfig = {
       // 테스트 폴더 숨김
       "**/테스트/**",
       "**/test/**",
+      // 내부 대시보드 숨김
+      "**/_홈.md",
       // 페르소나 정의·운영 메타 (혹시 동기화될 경우 대비)
       "**/personas/**",
       "**/transformers/**",
