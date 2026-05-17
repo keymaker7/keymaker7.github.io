@@ -20,21 +20,21 @@ description: "AI 리터러시와 AI SW 학습은 무엇이 다른가. 2022 개�
 
 ## 📸 카드뉴스 8장
 
-![1/8 — AI 리터러시 vs AI SW 학습 표지](/블로그/attachments/ai-리터러시-카드뉴스/card-01.png)
+![1/8 — AI 리터러시 vs AI SW 학습 표지](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-01.png)
 
-![2/8 — 79% 경험·68% 미학습](/블로그/attachments/ai-리터러시-카드뉴스/card-02.png)
+![2/8 — 79% 경험·68% 미학습](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-02.png)
 
-![3/8 — AI 리터러시는 코딩이 아니다](/블로그/attachments/ai-리터러시-카드뉴스/card-03.png)
+![3/8 — AI 리터러시는 코딩이 아니다](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-03.png)
 
-![4/8 — 5가지 핵심 역량](/블로그/attachments/ai-리터러시-카드뉴스/card-04.png)
+![4/8 — 5가지 핵심 역량](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-04.png)
 
-![5/8 — 리터러시 vs SW 학습 차이](/블로그/attachments/ai-리터러시-카드뉴스/card-05.png)
+![5/8 — 리터러시 vs SW 학습 차이](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-05.png)
 
-![6/8 — 2025~2026 정책 변화](/블로그/attachments/ai-리터러시-카드뉴스/card-06.png)
+![6/8 — 2025~2026 정책 변화](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-06.png)
 
-![7/8 — 단계별 학습 로드맵](/블로그/attachments/ai-리터러시-카드뉴스/card-07.png)
+![7/8 — 단계별 학습 로드맵](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-07.png)
 
-![8/8 — 함께 배우는 게 답](/블로그/attachments/ai-리터러시-카드뉴스/card-08.png)
+![8/8 — 함께 배우는 게 답](/00-personal/블로그/attachments/ai-리터러시-카드뉴스/card-08.png)
 
 ---
 
