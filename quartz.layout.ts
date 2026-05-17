@@ -39,7 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      folderDefaultState: "open",
+      folderDefaultState: "collapsed",
       useSavedState: false,
       filterFn: (node) => {
         const name = (node as any).name ?? ""
@@ -51,9 +51,11 @@ export const defaultContentPageLayout: PageLayout = {
       },
       mapFn: (node) => {
         if (!node.displayName) return
+        // strip leading "[어벤저스] " etc. prefix only — do NOT touch dates/dashes
         const cleaned = node.displayName
           .replace(/^\[[^\]]*\]\s*/, "")
-          .replace(/\s*[-—–]\s*.+$/, "")
+          // strip leading "YYYY-MM-DD-HHMM_" timestamp prefix on auto-generated posts
+          .replace(/^\d{4}-\d{2}-\d{2}-\d{4}_\s*/, "")
           .trim()
         if (cleaned) node.displayName = cleaned
       },
@@ -83,7 +85,7 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      folderDefaultState: "open",
+      folderDefaultState: "collapsed",
       useSavedState: false,
       filterFn: (node) => {
         const name = (node as any).name ?? ""
@@ -95,9 +97,11 @@ export const defaultListPageLayout: PageLayout = {
       },
       mapFn: (node) => {
         if (!node.displayName) return
+        // strip leading "[어벤저스] " etc. prefix only — do NOT touch dates/dashes
         const cleaned = node.displayName
           .replace(/^\[[^\]]*\]\s*/, "")
-          .replace(/\s*[-—–]\s*.+$/, "")
+          // strip leading "YYYY-MM-DD-HHMM_" timestamp prefix on auto-generated posts
+          .replace(/^\d{4}-\d{2}-\d{2}-\d{4}_\s*/, "")
           .trim()
         if (cleaned) node.displayName = cleaned
       },
