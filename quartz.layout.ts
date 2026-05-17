@@ -41,6 +41,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       folderDefaultState: "open",
       useSavedState: false,
+      filterFn: (node) => {
+        const name = (node as any).name ?? ""
+        // hide private/structural folders from the sidebar
+        if (name === "_archive") return false
+        if (name === "attachments") return false
+        if (name === "tags") return false
+        return true
+      },
       mapFn: (node) => {
         if (!node.displayName) return
         const cleaned = node.displayName
@@ -77,6 +85,14 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       folderDefaultState: "open",
       useSavedState: false,
+      filterFn: (node) => {
+        const name = (node as any).name ?? ""
+        // hide private/structural folders from the sidebar
+        if (name === "_archive") return false
+        if (name === "attachments") return false
+        if (name === "tags") return false
+        return true
+      },
       mapFn: (node) => {
         if (!node.displayName) return
         const cleaned = node.displayName
